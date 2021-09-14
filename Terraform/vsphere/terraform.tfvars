@@ -8,11 +8,11 @@ vm_guest_id = "centos8_64Guest"
 
 # VMware vSphere configuration #
 # VMware vCenter IP/FQDN
-vcenter_server = <IPAddr>
+vcenter_server = "10.10.2.115"
 # VMware vSphere username used to deploy the infrastructure
 vcenter_username = "administrator@vsphere.local"
 # VMware vCenter password used to deploy the infrastructure
-vcenter_password = <password> # change this to encrypted variable
+vcenter_password = "qazX989%" # change this to encrypted variable
 # Skip the verification of the vCenter SSL certificate (true/false)
 vcenter_unverified_ssl = "true"
 
@@ -24,7 +24,7 @@ vcenter_cluster = "computing"
 vcenter_datastore = "vsanDatastore"
 
 # vSphere Network used to deploy VMs 
-vm_network = <Network name>
+vm_network = "127vlan"
 
 # Linux virtual machine domain name
-vm_domain = <Domain name>
+vm_domain = "computing"
