@@ -1,0 +1,8 @@
+# Use VMDK artifact created during packer process
+Set-Location c:\IAC_Output\windows10-base
+VBoxManage clonemedium --format vhd windows10-2021-08-16-disk001.vmdk win10-21h1.vhd
+New-Item c:\mount -Type Directory
+New-Item c:\CapturedWIMs -Type Directory
+Mount-WindowsImage -ImagePath win10-21h1.vhd -Path c:\mount -Index 1
+New-WindowsImage -CapturePath C:\mount -Name win10-21h1 -ImagePath C:\CapturedWIMs\win10-21h1.wim -Description "Windows 10 21h1 Base Image" -Verify
+Dismount-WindowsImage -Path C:\VHDMount -Discard
